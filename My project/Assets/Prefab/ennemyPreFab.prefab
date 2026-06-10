@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 2159852035722489526}
   - component: {fileID: 7439557915731907423}
   - component: {fileID: 5955034748005670257}
-  - component: {fileID: 668214348176096636}
   - component: {fileID: -7532816011301433141}
+  - component: {fileID: -2299265343049772278}
+  - component: {fileID: -5261135973334448611}
   m_Layer: 0
   m_Name: ennemyPreFab
   m_TagString: Untagged
@@ -29,9 +30,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2820020915655091430}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.6125478, y: 0.38742524, z: -0.4834928, w: 0.4908377}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 24.44246, y: -60.98005, z: -81.98731}
-  m_LocalScale: {x: 80.82767, y: 80.82767, z: 80.82767}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -114,18 +115,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &668214348176096636
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2820020915655091430}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6834c98724178e4faa42da776c5df29, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnnemyController
 --- !u!114 &-7532816011301433141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,3 +131,40 @@ MonoBehaviour:
   cooldown: 0
   spawnMin: 0
   spawnMax: 0
+--- !u!195 &-2299265343049772278
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2820020915655091430}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1
+  m_BaseOffset: 0.5
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &-5261135973334448611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2820020915655091430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1afbc73e427ea08448c80ac7f7d3051d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AgentController
+  agent: {fileID: 0}
+  player: {fileID: 0}
+  distanceDetection: 8
