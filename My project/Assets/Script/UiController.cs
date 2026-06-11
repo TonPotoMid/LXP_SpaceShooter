@@ -9,6 +9,7 @@ public class UiController : MonoBehaviour
 
 
     public static int manche = 1;
+    public static float durreeManche = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -18,6 +19,6 @@ public class UiController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        mancheText.text = "Manche : " + manche;
+        mancheText.text = "Manche : " + manche + "\n Timer : " + durreeManche ;
     }
 }

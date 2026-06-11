@@ -9,11 +9,6 @@ public class EnnemySpawner : MonoBehaviour
     public float cooldown;
     public float spawnMin, spawnMax;
 
-    [Header("Gestion des Manches")]
-    // RETRAIT de "public int manche = 1;" car on utilise celle de l'UI maintenant !
-    [HideInInspector]
-    public float durreeManche;
-
     private List<GameObject> ennemisActuels = new List<GameObject>();
 
     void Start()
@@ -28,21 +23,22 @@ public class EnnemySpawner : MonoBehaviour
             // On utilise UiController.manche à la place de la variable locale
             print("Début de la manche : " + UiController.manche);
 
-            durreeManche = UiController.manche * 5f;
+            UiController.durreeManche = UiController.manche * 5f;
 
             // On fait apparaître le nombre d'ennemis basé sur la manche de l'UI
             yield return StartCoroutine(SpawnEnnemisPourManche(UiController.manche));
 
-            yield return new WaitForSeconds(durreeManche);
+            yield return new WaitForSeconds(UiController.durreeManche);
 
             print("Manche Terminée");
 
             ClearEntity();
 
+
+            yield return new WaitForSeconds(2f);
             // On augmente directement la variable static de l'UI !
             UiController.manche += 1;
 
-            yield return new WaitForSeconds(2f);
         }
     }
 
