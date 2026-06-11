@@ -31,14 +31,7 @@ public class PlayerController : MonoBehaviour
         // --- ROTATION (Touches M et K) ---
         float rotationInput = 0f;
 
-        if (Input.GetKey(KeyCode.M))
-        {
-            rotationInput = 1f; // Tourne à droite (ou sens horaire)
-        }
-        else if (Input.GetKey(KeyCode.K))
-        {
-            rotationInput = -1f; // Tourne à gauche (ou sens anti-horaire)
-        }
+
 
         // CORRECTION : Utilisation de transform.Rotate pour appliquer l'angle sur l'axe Y (Vector3.up)
         this.transform.Rotate(Vector3.up * rotationInput * rotationSpeed * Time.deltaTime);

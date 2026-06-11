@@ -7,7 +7,23 @@ public class EnnemySpawner : MonoBehaviour
     [Header("Paramètres de l'Ennemi")]
     public GameObject ennemyPreFab;
     public float cooldown;
-    public float spawnMin, spawnMax;
+
+    // RETRAIT de spawnMin et spawnMax car on utilise désormais des positions fixes !
+
+    // Tableau contenant toutes tes coordonnées X, Y, Z spécifiques
+    private Vector3[] pointsDeSpawn = new Vector3[]
+    {
+        new Vector3(130f, 6f, 0f),
+        new Vector3(130f, 6f, 60f),
+        new Vector3(70f, 6f, -60f),
+        new Vector3(10f, 6f, 0f),
+        new Vector3(10f, 6f, 60f),
+        new Vector3(10f, 6f, 100f),
+        new Vector3(130f, 6f, 100f),
+        new Vector3(250f, 6f, 100f),
+        new Vector3(250f, 6f, 60f),
+        new Vector3(250f, 6f, 0f)
+    };
 
     private List<GameObject> ennemisActuels = new List<GameObject>();
 
@@ -20,12 +36,10 @@ public class EnnemySpawner : MonoBehaviour
     {
         while (true)
         {
-            // On utilise UiController.manche à la place de la variable locale
             print("Début de la manche : " + UiController.manche);
 
             UiController.durreeManche = UiController.manche * 5f;
 
-            // On fait apparaître le nombre d'ennemis basé sur la manche de l'UI
             yield return StartCoroutine(SpawnEnnemisPourManche(UiController.manche));
 
             yield return new WaitForSeconds(UiController.durreeManche);
@@ -34,11 +48,8 @@ public class EnnemySpawner : MonoBehaviour
 
             ClearEntity();
 
-
             yield return new WaitForSeconds(2f);
-            // On augmente directement la variable static de l'UI !
             UiController.manche += 1;
-
         }
     }
 
@@ -46,7 +57,13 @@ public class EnnemySpawner : MonoBehaviour
     {
         for (int i = 0; i < nombreDEnnemis; i++)
         {
-            Vector3 spawnPos = transform.position + Vector3.right * Random.Range(spawnMin, spawnMax);
+            // 1. On choisit un index au hasard entre 0 et la taille du tableau (exclus)
+            int indexAleatoire = Random.Range(0, pointsDeSpawn.Length);
+
+            // 2. On récupère le Vector3 correspondant à cet index
+            Vector3 spawnPos = pointsDeSpawn[indexAleatoire];
+
+            // 3. On fait apparaître l'ennemi à cette position fixe précise
             GameObject nouvelEnnemi = Instantiate(ennemyPreFab, spawnPos, Quaternion.identity);
             ennemisActuels.Add(nouvelEnnemi);
 
