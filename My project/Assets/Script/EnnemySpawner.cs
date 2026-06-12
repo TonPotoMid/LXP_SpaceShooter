@@ -8,9 +8,7 @@ public class EnnemySpawner : MonoBehaviour
     public GameObject ennemyPreFab;
     public float cooldown;
 
-    // RETRAIT de spawnMin et spawnMax car on utilise désormais des positions fixes !
-
-    // Tableau contenant toutes tes coordonnées X, Y, Z spécifiques
+    
     private Vector3[] pointsDeSpawn = new Vector3[]
     {
         new Vector3(130f, 6f, 0f),
