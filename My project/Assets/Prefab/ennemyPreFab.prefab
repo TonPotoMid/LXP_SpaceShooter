@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 3095968375187486654}
   m_Layer: 0
   m_Name: ennemyPreFab
-  m_TagString: Untagged
+  m_TagString: ennemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -192,3 +192,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1be189a0d376404fa0196fc40091b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GestionCollision
+  player: {fileID: 0}

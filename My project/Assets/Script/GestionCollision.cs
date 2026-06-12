@@ -13,6 +13,7 @@ public class GestionCollision : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Destroy(player);
+
         }
     }
 }
