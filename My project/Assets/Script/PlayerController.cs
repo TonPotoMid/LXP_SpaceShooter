@@ -15,8 +15,8 @@ public class PlayerController : MonoBehaviour
     [Header("Prefabs & États")]
     public GameObject bulletPrefab;
 
-    // Cet interrupteur est faux par défaut : le joueur NE PEUT PAS tirer au début
-    private bool peutTirer = false;
+    // Compteur de munitions (0 par défaut au début du jeu)
+    private int munitions = 0;
 
     void Start()
     {
@@ -31,8 +31,8 @@ public class PlayerController : MonoBehaviour
         this.transform.position += direction * speed * Time.deltaTime;
 
         // --- 2. DETECTION DU TIR CONDITIONNEL ---
-        // Le joueur doit appuyer sur la touche ET posséder le bonus (peutTirer == true)
-        if (shootAction.action.WasPressedThisFrame() && peutTirer && bulletPrefab != null)
+        // Le joueur doit appuyer sur la touche ET posséder au moins 1 munition
+        if (shootAction.action.WasPressedThisFrame() && munitions > 0 && bulletPrefab != null)
         {
             Tirer();
         }
@@ -40,7 +40,17 @@ public class PlayerController : MonoBehaviour
 
     void Tirer()
     {
+        // Fait apparaître le projectile
         Instantiate(bulletPrefab, this.transform.position, Quaternion.identity);
+
+        // On consomme une munition
+        munitions--;
+        print("Balle tirée ! Munitions restantes : " + munitions);
+
+        if (munitions == 0)
+        {
+            print("Plus de munitions ! Arme désactivée.");
+        }
     }
 
     // --- 3. GESTION DES COLLISIONS ---
@@ -49,25 +59,12 @@ public class PlayerController : MonoBehaviour
         // Quand on touche le power-up
         if (collision.gameObject.CompareTag("powerUp"))
         {
-            print("Power-Up récupéré ! Armement activé pour 10 secondes.");
-
-            // On lance le compte à rebours de 10 secondes
-            StartCoroutine(RoutinePowerUp());
+            // On ajoute +10 munitions au stock existant
+            munitions += 10;
+            print("Power-Up récupéré ! +10 munitions ajoutées. Total : " + munitions);
 
             // On détruit le power-up visuel sur la carte
             Destroy(collision.gameObject);
         }
-    }
-
-    // Coroutine qui gère le temps du pouvoir
-    private IEnumerator RoutinePowerUp()
-    {
-        peutTirer = true; // L'interrupteur s'allume : le joueur a le droit de tirer !
-
-        // Le jeu attend précisément 10 secondes
-        yield return new WaitForSeconds(10f);
-
-        peutTirer = false; // Les 10 secondes sont passées, l'interrupteur s'éteint.
-        print("Fin du Power-Up ! Arme désactivée.");
     }
 }
