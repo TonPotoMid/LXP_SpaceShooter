@@ -6,7 +6,7 @@ public class BulletController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        Destroy(this.gameObject, 30f);
     }
 
     // Update is called once per frame

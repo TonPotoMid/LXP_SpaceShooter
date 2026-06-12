@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     [Header("Mouvements")]
     public float speed = 5f;
+    public float maxSpeed = 5f;
     public float rotationSpeed = 100f;
 
     [Header("Inputs InputSystem")]
@@ -17,7 +18,7 @@ public class PlayerController : MonoBehaviour
 
     public Rigidbody rb;
 
-    
+    private Vector2 oldInput;
     private int munitions = 5;
 
     void Start()
@@ -32,9 +33,22 @@ public class PlayerController : MonoBehaviour
     {
         // --- 1. DEPLACEMENT (ZQSD) ---
         Vector2 moveInput = moveAction.action.ReadValue<Vector2>();
+
+        if (oldInput != null && Vector2.Dot(moveInput, oldInput) < 0.45)
+        {
+         //   rb.linearVelocity = Vector3.zero;
+        }
+        oldInput = moveInput;
+
         Vector3 direction = new Vector3(moveInput.x, 0f, moveInput.y);
         Vector3 nouvellePosition = rb.position + direction * speed * Time.deltaTime;
-        rb.MovePosition(nouvellePosition);
+        //rb.MovePosition(nouvellePosition);
+        rb.AddForce(direction * speed, ForceMode.VelocityChange);
+
+        if (moveInput.magnitude < 0.1f)
+            rb.linearVelocity = Vector3.zero;
+
+        //if (rb.linearVelocity.magnitude > maxSpeed) rb.linearVelocity = rb.linearVelocity.normalized * maxSpeed;
 
         // --- 2. DETECTION DU TIR CONDITIONNEL ---
         // Le joueur doit appuyer sur la touche ET posséder au moins 1 munition
@@ -44,6 +58,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void FixedUpdate()
+    {
+        if (rb.linearVelocity.magnitude > maxSpeed) rb.linearVelocity = rb.linearVelocity.normalized * maxSpeed;
+
+    }
     void Tirer()
     {
         // Fait apparaître le projectile
