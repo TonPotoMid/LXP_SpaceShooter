@@ -56,14 +56,14 @@ public class PlayerController : MonoBehaviour
     // --- 3. GESTION DES COLLISIONS ---
     private void OnCollisionEnter(Collision collision)
     {
-        // Quand on touche le power-up
+       
         if (collision.gameObject.CompareTag("powerUp"))
         {
-            // On ajoute +10 munitions au stock existant
-            munitions += 10;
+            
+            munitions += 5;
             print("Power-Up récupéré ! +10 munitions ajoutées. Total : " + munitions);
 
-            // On détruit le power-up visuel sur la carte
+            
             Destroy(collision.gameObject);
         }
     }
