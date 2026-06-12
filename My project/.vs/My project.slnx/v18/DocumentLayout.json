@@ -3,8 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\Sbst1\\OneDrive\\Desktop\\lan\\unity\\projetLXP\\LXP_SpaceShooter\\My project\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\sbst1\\onedrive\\desktop\\lan\\unity\\projetlxp\\lxp_spaceshooter\\my project\\assets\\script\\collisionpowerup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\collisionpowerup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\sbst1\\onedrive\\desktop\\lan\\unity\\projetlxp\\lxp_spaceshooter\\my project\\assets\\script\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\sbst1\\onedrive\\desktop\\lan\\unity\\projetlxp\\lxp_spaceshooter\\my project\\assets\\script\\gestioncollision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\gestioncollision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\sbst1\\onedrive\\desktop\\lan\\unity\\projetlxp\\lxp_spaceshooter\\my project\\assets\\script\\agentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\agentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\sbst1\\onedrive\\desktop\\lan\\unity\\projetlxp\\lxp_spaceshooter\\my project\\assets\\script\\bulletcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\bulletcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\sbst1\\onedrive\\desktop\\lan\\unity\\projetlxp\\lxp_spaceshooter\\my project\\assets\\script\\ennemycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\ennemycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\sbst1\\onedrive\\desktop\\lan\\unity\\projetlxp\\lxp_spaceshooter\\my project\\assets\\script\\ennemyspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\ennemyspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\sbst1\\onedrive\\desktop\\lan\\unity\\projetlxp\\lxp_spaceshooter\\my project\\assets\\script\\uicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\uicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +47,105 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "CollisionPowerUp.cs",
+              "DocumentMoniker": "C:\\Users\\Sbst1\\OneDrive\\Desktop\\lan\\unity\\projetLXP\\LXP_SpaceShooter\\My project\\Assets\\Script\\CollisionPowerUp.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\CollisionPowerUp.cs",
+              "ToolTip": "C:\\Users\\Sbst1\\OneDrive\\Desktop\\lan\\unity\\projetLXP\\LXP_SpaceShooter\\My project\\Assets\\Script\\CollisionPowerUp.cs",
+              "RelativeToolTip": "Assets\\Script\\CollisionPowerUp.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAYwB0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-12T08:08:59.609Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PlayerController.cs",
+              "DocumentMoniker": "C:\\Users\\Sbst1\\OneDrive\\Desktop\\lan\\unity\\projetLXP\\LXP_SpaceShooter\\My project\\Assets\\Script\\PlayerController.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\PlayerController.cs",
+              "ToolTip": "C:\\Users\\Sbst1\\OneDrive\\Desktop\\lan\\unity\\projetLXP\\LXP_SpaceShooter\\My project\\Assets\\Script\\PlayerController.cs",
+              "RelativeToolTip": "Assets\\Script\\PlayerController.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAswEgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-11T10:10:04.395Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GestionCollision.cs",
+              "DocumentMoniker": "C:\\Users\\Sbst1\\OneDrive\\Desktop\\lan\\unity\\projetLXP\\LXP_SpaceShooter\\My project\\Assets\\Script\\GestionCollision.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\GestionCollision.cs",
+              "ToolTip": "C:\\Users\\Sbst1\\OneDrive\\Desktop\\lan\\unity\\projetLXP\\LXP_SpaceShooter\\My project\\Assets\\Script\\GestionCollision.cs",
+              "RelativeToolTip": "Assets\\Script\\GestionCollision.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-11T10:03:30.801Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "AgentController.cs",
               "DocumentMoniker": "C:\\Users\\Sbst1\\OneDrive\\Desktop\\lan\\unity\\projetLXP\\LXP_SpaceShooter\\My project\\Assets\\Script\\AgentController.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\AgentController.cs",
               "ToolTip": "C:\\Users\\Sbst1\\OneDrive\\Desktop\\lan\\unity\\projetLXP\\LXP_SpaceShooter\\My project\\Assets\\Script\\AgentController.cs",
               "RelativeToolTip": "Assets\\Script\\AgentController.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAIwBwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAgwHYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-10T10:04:02.941Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EnnemyController.cs",
+              "DocumentMoniker": "C:\\Users\\Sbst1\\OneDrive\\Desktop\\lan\\unity\\projetLXP\\LXP_SpaceShooter\\My project\\Assets\\Script\\EnnemyController.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\EnnemyController.cs",
+              "ToolTip": "C:\\Users\\Sbst1\\OneDrive\\Desktop\\lan\\unity\\projetLXP\\LXP_SpaceShooter\\My project\\Assets\\Script\\EnnemyController.cs",
+              "RelativeToolTip": "Assets\\Script\\EnnemyController.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-11T10:01:45.144Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BulletController.cs",
+              "DocumentMoniker": "C:\\Users\\Sbst1\\OneDrive\\Desktop\\lan\\unity\\projetLXP\\LXP_SpaceShooter\\My project\\Assets\\Script\\BulletController.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\BulletController.cs",
+              "ToolTip": "C:\\Users\\Sbst1\\OneDrive\\Desktop\\lan\\unity\\projetLXP\\LXP_SpaceShooter\\My project\\Assets\\Script\\BulletController.cs",
+              "RelativeToolTip": "Assets\\Script\\BulletController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-11T09:30:31.661Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UiController.cs",
+              "DocumentMoniker": "C:\\Users\\Sbst1\\OneDrive\\Desktop\\lan\\unity\\projetLXP\\LXP_SpaceShooter\\My project\\Assets\\Script\\UiController.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\UiController.cs",
+              "ToolTip": "C:\\Users\\Sbst1\\OneDrive\\Desktop\\lan\\unity\\projetLXP\\LXP_SpaceShooter\\My project\\Assets\\Script\\UiController.cs",
+              "RelativeToolTip": "Assets\\Script\\UiController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-11T08:52:17.942Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EnnemySpawner.cs",
+              "DocumentMoniker": "C:\\Users\\Sbst1\\OneDrive\\Desktop\\lan\\unity\\projetLXP\\LXP_SpaceShooter\\My project\\Assets\\Script\\EnnemySpawner.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\EnnemySpawner.cs",
+              "ToolTip": "C:\\Users\\Sbst1\\OneDrive\\Desktop\\lan\\unity\\projetLXP\\LXP_SpaceShooter\\My project\\Assets\\Script\\EnnemySpawner.cs",
+              "RelativeToolTip": "Assets\\Script\\EnnemySpawner.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAA8wFQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-11T07:49:00.112Z",
               "EditorCaption": ""
             }
           ]
