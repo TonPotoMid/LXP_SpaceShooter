@@ -15,12 +15,17 @@ public class PlayerController : MonoBehaviour
     [Header("Prefabs & États")]
     public GameObject bulletPrefab;
 
-    // Compteur de munitions (0 par défaut au début du jeu)
-    private int munitions = 0;
+    public Rigidbody rb;
+
+    
+    private int munitions = 5;
 
     void Start()
     {
-        print(this.transform.position);
+        if (rb == null)
+        {
+            rb = GetComponent<Rigidbody>();
+        }
     }
 
     void Update()
@@ -28,7 +33,8 @@ public class PlayerController : MonoBehaviour
         // --- 1. DEPLACEMENT (ZQSD) ---
         Vector2 moveInput = moveAction.action.ReadValue<Vector2>();
         Vector3 direction = new Vector3(moveInput.x, 0f, moveInput.y);
-        this.transform.position += direction * speed * Time.deltaTime;
+        Vector3 nouvellePosition = rb.position + direction * speed * Time.deltaTime;
+        rb.MovePosition(nouvellePosition);
 
         // --- 2. DETECTION DU TIR CONDITIONNEL ---
         // Le joueur doit appuyer sur la touche ET posséder au moins 1 munition
